@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+  }
+  
+  .welcome {
+    height: 100vh;
+    
+    /* Setam o imagine de fundal */
+    background-image: url('https://www.bmc-switzerland.com/media/catalog/category/BMC_Parent_Category_Header_Image_Mountain_All_Mountain_1.jpg');
+    /* Redimensionam imaginea, astfel incat sa acopere intregul element. */
+    background-size: cover;
+    /* Setam imaginea sa nu se repete. */
+    background-repeat: no-repeat;
+    /* Centram imaginea de fundal. */
+    background-position: center;
+    
+    /* Cu aceasta combinatie de 3 proprietati, putem centra un element in interiorul altuia (textul in interiorul sectiunii). */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Este necesar sa avem un element cu position: relative, atunci cand folosim position: absolute, deoarece elementul cu position: absolute se va ghida dupa primul element cu position: relative (daca nu gaseste niciunul, il va lua pe body ca reper). */
+    position: relative;
+  }
+  
+  h2 {
+    color: white;
+    /* Vrem ca textul sa apara deasupra overlay-ului, deci dam o valoare pozitiva pentru z-index. */
+    z-index: 3;
+  }
+  
+  .overlay {
+    /* height si width 100% inseamna ca vor avea aceleasi valori ca ale parintelui direct. */
+    height: 100%;
+    width: 100%;
+    /* Foarte important este ca pentru overlay sa dam transparenta, vrem sa se vada imaginea de dedesubt. */
+    background-color: rgba(11, 11, 11, 0.5);
+    
+    /* Ne pozitionam absolut, fata de sectiune, in coltul stanga sus. */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+  }

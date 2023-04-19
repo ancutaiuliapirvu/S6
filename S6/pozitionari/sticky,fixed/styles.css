@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    /* Facem marimea la font de 4 ori mai mare decat cea a root-ului (cea default) doar pentru a vedea mai usor efectul sticky. */
+    font-size: 4rem;
+}
+
+nav {
+    background-color: blue;
+    color: white;
+
+    /* position: sticky => la scroll, ramane lipit (dupa ce a trecut de pozitia specificata).
+    Pe langa position: sticky, este necesar sa specificam si un atribut pozitional (top, left, bottom sua right). */
+    position: sticky;
+    top: 0;
+}
+
+img {
+    width: 75px;
+
+    /* position: fixed => elementul ramane permanent in acea pozitie.
+    top: 0; left: 0; => colt stanga sus. bottom: 0; right: 0; => colt dreapta jos. */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /* top: 10px;
+    left: 10px; */
+}
